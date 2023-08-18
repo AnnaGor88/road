@@ -16,8 +16,7 @@ li {
     list-style-type: none;
 }
 
-body,
-button {
+body {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -133,6 +132,7 @@ button {
         padding: 7px;
         background-color: $lightgray;
         font-size: 18px;
+        font-family: 'Oswald', sans-serif;
     }
 
     &__button {
