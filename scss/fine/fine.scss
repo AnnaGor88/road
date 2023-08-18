@@ -1,0 +1,77 @@
+@import '../variables.scss';
+@import '../../style/header.scss';
+@import '../../style/footer.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $middleblack;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.fine-main {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        color: $blackcolor;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 390;
+        color: $middleblack;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+.fine-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    padding-bottom: 100px;
+
+    &__calc {
+        &:hover {
+            color: $ochracolor;
+        }
+    }
+
+    &__check {
+        &:hover {
+            color: $ochracolor;
+        }
+    }
+}

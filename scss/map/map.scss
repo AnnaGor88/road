@@ -1,0 +1,56 @@
+@import '../variables.scss';
+@import '../../style/header.scss';
+@import '../../style/footer.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $middleblack;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.map-main {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: $blackcolor;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    &__gps {
+        display: flex;
+        min-height: 30vh;
+        overflow: hidden;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+}

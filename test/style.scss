@@ -1,0 +1,152 @@
+@import 'variables.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body,
+button {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $blackcolor;
+
+    &__hello {
+        text-align: center;
+        margin: 80px 0 10px 0;
+        font-size: 22px;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+    &__question {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+        box-shadow: 2px 4px 4px 3px $graycolor;
+        margin-top: 20px;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__question>div>img {
+        max-width: 100%;
+    }
+
+    &__question div,
+    &__question-question {
+        text-align: center;
+    }
+
+    &__question-title {
+        font-size: 36px;
+        padding-bottom: 30px;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 24px;
+        }
+    }
+
+    &__question-block {
+        padding-left: 30px;
+    }
+
+    &__question-question {
+        font-size: 24px;
+        padding: 20px 10px;
+        margin: 20px 0;
+        border: 1px solid $graycolor;
+        border-radius: 10px;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+    &__question-answer {
+        padding-bottom: 10px;
+        color: $middlegray;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        list-style: decimal;
+    }
+
+    &__question-info-title {
+        color: $ochracolor;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        cursor: help;
+    }
+
+    &__question-info img {
+        height: 25px;
+    }
+
+    &__question-info[open] summary {
+        padding: 5px;
+        background-color: $graycolor;
+        margin-bottom: 10px;
+        color: $whitecolor;
+        cursor: default;
+    }
+
+    &__question-btn {
+        width: 100%;
+        border-radius: 10px;
+        border: 0;
+        padding: 7px;
+        background-color: $lightgray;
+        font-size: 18px;
+    }
+
+    &__button {
+        color: $ochracolor;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-decoration: none;
+    }
+
+    &__button:hover {
+        color: $lightochra;
+    }
+}

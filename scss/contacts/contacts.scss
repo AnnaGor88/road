@@ -1,0 +1,224 @@
+@import '../variables.scss';
+@import '../../style/header.scss';
+@import '../../style/footer.scss';
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $middleblack;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.contacts-main {
+    &__contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: $blackcolor;
+        text-transform: uppercase;
+        font-weight: 500;
+        align-items: center;
+
+    }
+
+    &__block-top {
+        display: flex;
+        gap: 100px;
+        padding-bottom: 30px;
+        justify-content: space-around;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0;
+        }
+    }
+
+    &__photo {
+        display: flex;
+        padding-left: 30px;
+        min-height: 150px;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 10px;
+
+        @media screen and (min-width: 1500px) {
+            font-size: 32px;
+        }
+    }
+
+    &__job {
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 1500px) {
+            font-size: 26px;
+        }
+    }
+
+    &__tel {
+        @media screen and (min-width: 1500px) {
+            font-size: 26px;
+        }
+
+    }
+
+
+    &__block-bottom {
+        display: flex;
+        padding-top: 100px;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 40px;
+        margin-bottom: 50px;
+        justify-content: space-around;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            flex-direction: column;
+            padding-top: 0;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        overflow: hidden;
+        row-gap: 30px;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            align-items: center;
+            row-gap: 10px;
+        }
+
+        @media screen and (max-width: 767px) {
+            align-items: center;
+            row-gap: 10px;
+        }
+    }
+
+    &__address {
+        padding-top: 60px;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            padding-top: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-top: 0;
+        }
+
+        @media screen and (min-width: 1500px) {
+            font-size: 26px;
+        }
+    }
+
+    &__svg-address,
+    &__svg-mail,
+    &__svg-tel {
+        position: absolute;
+    }
+
+    &__street,
+    &__city,
+    &__mailto,
+    &__number-tel {
+        padding-left: 37px;
+
+        @media screen and (min-width: 1500px) {
+            font-size: 26px;
+        }
+    }
+
+    &__map {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+    }
+}
+
+// здесь начинаются стили страницы about_us
+
+.main-about {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__title {
+        text-align: center;
+        font-size: 30px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__discribe {
+        font-size: 24px;
+    }
+}
+
+.main-discribe {
+    font-size: 36px;
+    text-decoration: underline;
+}
+
+// здесь заканчиваются стили страницы about_us

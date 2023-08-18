@@ -1,0 +1,321 @@
+@import 'variables.scss';
+@import 'footer.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+text-decoration: none;
+color: #464646;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px)  {
+        padding-left: 30px;
+        padding-right: 30px;  
+    }
+}
+
+.header{
+position: relative;
+overflow: hidden;
+height: 600px;
+width: 100%;
+z-index: 3;
+    &::before {
+    content: "";
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        z-index: -1
+    }
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+&__img {
+    width: 50px;
+    height: 50px;
+}
+&__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    left: 20%;
+    width: 60%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-top: 30px;
+    margin-left: 20px;
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+    }
+
+    &__navigation {
+        position: relative;
+    }
+
+    &__title {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        right: 15%;
+        text-align: center;
+
+    @media screen and (min-width: 1500px) {
+        right: 30%;
+        left: 30%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        top: 50%;
+        left: 25%;
+        right: 25%;
+        box-shadow: 0 0 7px black;
+        background-color: #80808073;
+    }
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #80808075;
+        right: 0;
+    }
+    }
+
+    &__name {
+        color: $whitecolor;
+        font-weight: 700;
+        font-size: 70px;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px $blackcolor;
+
+        @media screen and (min-width: 1500px) {
+            font-weight: 700;
+            -webkit-text-stroke: 3px $blackcolor;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 31px;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        color: $whitecolor;
+        font-weight: 400;
+        text-align: center;
+        font-size: 26px;
+        -webkit-text-stroke: 1px #130C00;
+
+        @media screen and (min-width: 1500px) {
+            font-size: 30px;
+            font-weight: 500;
+            -webkit-text-stroke: 2px #130C00;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            -webkit-text-stroke: .5px #130C00;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            font-weight: 500; 
+        }
+    }
+
+    &__link {
+        color: $whitecolor;
+        font-weight: 500;
+        transition: color 1s ease-in-out;
+
+        &:hover {
+            color: $lightochra;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        background: url("../assets/image/bg_mini.jpg") center center / cover no-repeat;
+    }
+}
+
+.dropbtn {
+    background-color: $ochracolor;
+    color: $blackcolor;
+    border-radius: 7%;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: $lightochra;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    margin-top: 50px;
+    left: 85%;
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 597px) {
+        left: 85%;
+    }
+
+    @media screen and (max-width: 596px) {
+        margin-top: 20px;
+        left: 75%;
+    }
+
+    @media screen and (max-width: 321px) {
+        margin-top: 20px;
+        left: 70%;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(197, 189, 189);
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    @media screen and (max-width: 1024px) {
+        min-width: 80px;
+    }
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 1s ease-in-out;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.logo {
+    position: relative;
+    height: 150px;
+    width: 150px;
+
+    @media screen and (max-width: 767px) {
+        height: 100px;
+    width: 100px;
+    }
+
+    &_block {
+        position: absolute;
+    }
+}
+
+.footer {
+background-color: $middleblack;
+
+&__content {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+    &__logo {
+        width: 100px;
+    }
+    &__text {
+        color: $whitecolor;
+        font-weight: 200;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__address {
+        color: $ochracolor;
+    }
+    &__center {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    &_title {
+    color: $whitecolor;
+    border-bottom: 1px solid $ochracolor;
+    }
+    &__links {
+        color: $whitecolor;
+        font-weight: 200;
+
+        &:hover {
+            color: $ochracolor;  
+        }
+    }
+}
+
+.address_img {
+    fill: $ochracolor;
+    width: 10px;
+    height: 10px;
+}
+
+
+.main_container pd{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .main_container-pam-subtitle{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+  }
